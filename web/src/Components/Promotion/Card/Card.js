@@ -18,8 +18,8 @@ const PromotionCard = ({ promotion }) => (
           </div>
         )}
         <div className="promotion-card__comments-count">
-          {promotion.comments.length}{' '}
-          {promotion.comments.length > 1 ? 'Comentários' : 'Comentário'}
+          {promotion.comments.length < 1 ? "nenhum" : promotion.comments.length}{' '}
+          {promotion.comments.length > 1 ? 'comentários' : 'comentário'}
         </div>
         <a
           href={promotion.url}
